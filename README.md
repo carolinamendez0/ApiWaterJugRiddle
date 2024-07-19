@@ -105,7 +105,8 @@ Algunas de las posibles respuestas :
 
  En caso de respuesta exitosa: 
 
-```json {
+```json 
+{
   "message": {
     "solution": [
       {
@@ -151,7 +152,7 @@ transferir(x,y,valorX,valorY,'y')//idem caso de transferir explicado más arroba
 ### Ejecución test 
 Para correr los test los pasos son los siguientes:
 ```
-> npm run test
+npm run test
 ```
 # 🔸 Explicación de algoritmo 
 El método solución es quien maneja la solicitud POST con el metodo solucion ubicado en controller/jarrascontrollers.js, extrayendo los valores x_capacity, y_capacity, y z_amount_wanted del req.body luego utiliza la validacionNumber(ubicado en service/funcionesAuxiliares.js), donde validamos los diferentes requerimientos de los numeros ( que sean 3 los parametros enviados, que sean los 3 numericos y enteros positivos. También verifica si Z es multiplo del MCD de las jarras x e y ) si detecta error en este envia el status 401 con el mensaje de error de la validación correspondiente.
