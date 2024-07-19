@@ -18,6 +18,7 @@
   - [Posibles estados - diferentes acciones](#posibles-estados---diferentes-acciones)
 - [🔹 Test](#-test)
     - [Ejecución test](#ejecución-test)
+      - [Ejemplos de test](#ejemplos-de-test)
 - [🔸 Explicación de algoritmo](#-explicación-de-algoritmo)
 
 # 🔸 Información General
@@ -154,6 +155,26 @@ Para correr los test los pasos son los siguientes:
 ```
 npm run test
 ```
+#### Ejemplos de test 
+``` 
+  llenar jarras dado que z_amount_wanted no es multiplo
+        "x_capacity": 22,
+        "y_capacity": 6,
+        "z_amount_wanted": 5
+```
+```
+ingresar parametros invalidos
+        "x_capacity": 6,
+        "y_capacity": 6,
+        "z_amount_wanted": -6
+```
+```
+ingresar valor z_amount_wanted mayor al de las capacidades de x,y
+        "x_capacity": 6,
+        "y_capacity": 6,
+        "z_amount_wanted": 22
+```
+
 # 🔸 Explicación de algoritmo 
 El método solución es quien maneja la solicitud POST con el metodo solucion ubicado en controller/jarrascontrollers.js, extrayendo los valores x_capacity, y_capacity, y z_amount_wanted del req.body luego utiliza la validacionNumber(ubicado en service/funcionesAuxiliares.js), donde validamos los diferentes requerimientos de los numeros ( que sean 3 los parametros enviados, que sean los 3 numericos y enteros positivos. También verifica si Z es multiplo del MCD de las jarras x e y ) si detecta error en este envia el status 401 con el mensaje de error de la validación correspondiente.
 ```js let resultado = solveWaterJug(x_capacity, y_capacity, z_amount_wanted)```, es la funcion que se llama para implementar el algoritmo BFS que busca la solución y le devuelve los resultados al cliente. 

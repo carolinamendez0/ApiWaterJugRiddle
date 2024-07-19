@@ -61,7 +61,7 @@ test('llenar jarras dado que z_amount_wanted es multiplo, son positivos y entero
 
 test('ingresar parametros invalidos', async (t) => {
     const req = {
-        "x_capacity": 'a',
+        "x_capacity": 6,
         "y_capacity": 6,
         "z_amount_wanted": -6
     }
