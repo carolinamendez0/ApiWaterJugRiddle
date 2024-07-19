@@ -39,14 +39,14 @@ Para la resolución del algoritmo, se utilizaron diferentes calculos y resolucio
 El entorno  ya cuenta con los paquetes necesarios para poder utilizar la API.
 
 ### Pasos para la instalación
-git clone `https://github.com/carolinamendez0/ApiWaterJugRiddle.git`
+git clone `https://github.com/carolinamendez0/ApiWaterJugRiddle.git` .
 cd ApiWaterJugRiddle
 npm install
 
 ### Ejecución
 Nos ubicamos en la carpeta clonada, y ponemos en la terminal 
 ```
-> npm run start
+npm run start
 ```
 
 # 🔸 Estructura del proyecto 
